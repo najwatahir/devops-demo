@@ -22,3 +22,7 @@ jobs:
         run: |
           cd /var/www/devops-demo
           composer install --no-dev --optimize-autoloader
+      - name: Run database migrations
+        run: |
+          cd /var/www/devops-demo
+          php artisan migrate --force
